@@ -1,0 +1,270 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom Styles */
+
+*
+{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+}
+    
+:root{
+    --primary: #222946;
+    --secondary: #4bb668;
+    --tertiary: #8c8e92;
+}
+
+a {text-decoration: none;}
+
+/* Modular class */
+
+html {
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-start {
+    align-items: flex-start;
+}
+
+.flex-48 {
+    flex: 0 1 48%;
+}
+
+.flex-30 {
+    flex: 0 1 30%;
+}
+
+.section-padding {
+    padding: 6rem 0;
+}
+
+.font-zero {
+    font-size: 0;
+}
+
+.width-full {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Buttons */
+
+.btn-primary {
+    font-size: 1.2rem;
+    padding: 1rem 1.6rem;
+    background-color: var(--secondary);
+    color: #fff;
+    font-weight: 400;
+    border-radius: 8px;
+}
+
+.btn-secondary {
+    padding: 0.6rem 1rem;
+}
+
+/* Header */
+
+.header{
+    padding: 2rem 0;
+    background-color: var(--primary);
+}
+
+.nav-links a{
+    padding-right: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.nav-links .active{
+    color: var(--secondary);
+}
+
+/* Lorem section */
+
+.hero-section {
+    background-color: #e9ecfc;
+}
+.article-heading {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    color: #272727;
+    font-weight: 600;
+    letter-spacing: -0.2rem;
+}
+.article-para{
+    font-size: 1.2rem;
+    padding-bottom: 2.4rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--tertiary);
+}
+
+/* Blog Section */
+
+.section-heading {
+    font-size: 2.6rem;
+    padding-bottom: 3rem;
+    color: #272727;
+    font-weight: 600;
+    letter-spacing: -0.2rem;
+    text-align: center;
+}
+
+.blog-heading {
+    padding: 2rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.1rem;
+}
+.blog-para {
+    padding-bottom: 2.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--tertiary);
+    line-height: 1.5;
+}
+
+.blog-img img {
+    height: 15.5rem;
+}
+
+/* Footer */
+
+.footer {
+    padding: 2rem 0;
+    background-color: var(--primary);
+    color: #bcc0d2;
+}
+
+small{
+    font-weight: 600;
+}
+
+.find-us a {
+    color: #bcc0d2;
+    font-size: 2.2rem;
+    border: 0.4rem 0.8rem;
+    border-radius: 8px;
+    padding-right: 2rem;
+}
+
+/* Small Screen View (below 768 px) */
+
+@media all and (max-width:768px){
+    html{
+        font-size: 10px;
+    }
+    .flex-48,.flex-30 {
+        flex: 0 1 100%;
+    }
+    .flex{
+        flex-wrap: wrap;
+    }
+    .container {
+        padding: 0 3rem;
+    }
+
+    /* Header and Footer */
+    .header .container,.footer .container {
+        flex-direction: column;
+    }
+    .header img,small {
+        margin-bottom: 1.4rem;
+    }
+    .nav-links a {
+        padding: 0 1rem;
+    }
+    .find-us a{
+        padding-right: 0;
+        margin: 0 1rem;
+    }
+    /* Hero section */
+    .lorem-article .flex {
+        flex-direction: column-reverse;
+    }
+
+    .article-image {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    /* Blog Section */
+    .blog-section article {
+        margin-bottom: 3.6rem;
+    }
+    .blog-img img{
+        height: 100%;
+    }
+    .blog-heading,.blog-para {
+        padding-bottom: 1.2rem;
+    }
+    .blog-section {
+        padding: 4rem 0;
+    }
+}
