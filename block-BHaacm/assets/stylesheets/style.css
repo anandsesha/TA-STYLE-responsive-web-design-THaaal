@@ -217,6 +217,9 @@ small{
 /* Small Screen View (below 768 px) */
 
 @media all and (max-width:768px){
+    .container{
+        max-width: 720px;
+    }
     html{
         font-size: 10px;
     }
@@ -266,5 +269,26 @@ small{
     }
     .blog-section {
         padding: 4rem 0;
+    }
+}
+
+/* For Large Screen */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* For Medium Screen */
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* For very small Screen */
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 540px;
     }
 }
