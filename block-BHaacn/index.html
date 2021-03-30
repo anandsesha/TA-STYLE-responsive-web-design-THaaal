@@ -2,6 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
         <title>Responsive Web Design | Assignment 2</title>
         <!-- Stylesheet -->
         <link rel="stylesheet" href="assets/stylesheets/style.css">
@@ -17,8 +19,12 @@
         <header class="header">
             <div class="container flex align-baseline">
                 <h2 class="header-heading">Alt Events</h2>
+                <label class="bars" for="toggle">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <input id="toggle" type="checkbox">
                 <nav class="nav-links">
-                    <ul class="flex">
+                    <ul class="flex wrap column">
                         <li>
                             <a href="#">Home</a>
                         </li>
@@ -39,8 +45,8 @@
         <main>
             <!-- Hero Section -->
             <section class="hero-section section-padding">
-                <div class="container flex item-center">
-                    <div class="hero-description flex-48">
+                <div class="container flex item-center wrap">
+                    <div class="hero-description flex-48 flex-100 padding-768">
                         <h1 class="hero-heading">Web Developer Conference <span>2020</span></h1>
                         <p class="hero-para">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -50,18 +56,18 @@
                         </p>
                         <a class="btn-primary btn-secondary" href="#">Register Now</a>
                     </div>
-                    <div class="hero-image font-zero">
+                    <div class="hero-image font-zero flex-100 padding-768">
                         <img class="width-full" src="assets/media/hero.png" alt="hero-pic">
                     </div>
                 </div>
             </section>
             <!-- About section -->
             <section class="about-section section-padding">
-                <div class="container flex">
-                    <div class="about-image font-zero flex-46">
+                <div class="container flex wrap">
+                    <div class="about-image font-zero flex-46 flex-100">
                         <img class="width-full" src="assets/media/about.png" alt="about-pic">
                     </div>
-                    <div class="about-description flex-46">
+                    <div class="about-description flex-46 flex-100 padding-768">
                         <h2 class="about-heading">About the event</h2>
                         <p class="section-para">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit ame. 
@@ -77,9 +83,9 @@
                 <div class="continer">
                     <h2 class="section-heading">Why You Should Join</h2>
                     
-                    <div class="flex container justify-between">
+                    <div class="flex container justify-between wrap">
 
-                        <div class="flex-30">
+                        <div class="flex-30 flex-100">
                             <fieldset>
                             <legend>1</legend>
                             <h3 class="join-heading">Network</h3>
@@ -90,7 +96,7 @@
                             </fieldset>
                         </div>
                             
-                        <div class="flex-30">
+                        <div class="flex-30 flex-100">
                             <fieldset>
                                 <legend>2</legend>
                                 <h3 class="join-heading">Great Speakers</h3>
@@ -101,7 +107,7 @@
                             </fieldset>
                         </div>
 
-                        <div class="flex-30">
+                        <div class="flex-30 flex-100">
                             <fieldset>
                                 <legend>3</legend>
                                 <h3 class="join-heading">Information</h3>
@@ -120,16 +126,16 @@
                     <h2 class="section-heading">Schedule</h2>
                     
                     <!-- 6-Sept -->
-                    <div class="schedule-card flex">
+                    <div class="schedule-card flex active-color">
                         <div class="circle flex justify-center item-center flex-column circle-active">
                             <h5>06</h5>
                             <h5>Sept</h5>
                         </div>
-                        <div class="font-zero flex-20">
+                        <div class="font-zero flex-20 schedule-img">
                             <img class="width-full" src="assets/media/schedule-01.jpg" alt="schedule-1">
                         </div>
                         <div class="flex-50">
-                            <h3 class="schedule-heading">Digital World Event Conversation</h3>
+                            <h3 class="schedule-heading schedule-desc">Digital World Event Conversation</h3>
                             <p class="section-para">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit ame. 
                                 Laboriosam est error cupiditate eos tempora nostrum accusamus.
@@ -138,7 +144,7 @@
                     </div>
 
                     <!-- 7-Sept -->
-                    <div class="schedule-card flex">
+                    <div class="schedule-card flex other-color">
                         <div class="circle flex justify-center item-center flex-column date-color">
                             <h5>07</h5>
                             <h5>Sept</h5>
@@ -156,7 +162,7 @@
                     </div>
 
                     <!-- 8-Sept -->
-                    <div class="schedule-card flex">
+                    <div class="schedule-card flex other-color">
                         <div class="circle flex justify-center item-center flex-column date-color">
                             <h5>08</h5>
                             <h5>Sept</h5>
@@ -174,7 +180,7 @@
                     </div>
 
                     <!-- 9-Sept -->
-                    <div class="schedule-card flex">
+                    <div class="schedule-card flex other-color">
                         <div class="circle flex justify-center item-center flex-column date-color">
                             <h5>09</h5>
                             <h5>Sept</h5>
@@ -234,8 +240,8 @@
             <!-- Our Latest New Section -->
             <section class="latest-news-section section-padding">
                 <h2 class="section-heading">Our Latest News</h2>
-                <div class="container flex">
-                    <article class="flex-30">
+                <div class="container flex wrap">
+                    <article class="flex-30 flex-100 padding-768">
                         <img class="article-image width-full" src="assets/media/news-01.png" alt="news-1">
                         <h4 class="article-heading">How to build a great portfolio as a beginner developer</h4>
                         <p class="section-para">
@@ -245,7 +251,7 @@
                         <a class="basic-btn-link" href="#">Read more</a>
                     </article>
 
-                    <article class="flex-30">
+                    <article class="flex-30 flex-100 padding-768">
                         <img class="article-image width-full" src="assets/media/news-02.png" alt="news-2">
                         <h4 class="article-heading">4 Common Situation while using Git and how to solve them</h4>
                         <p class="section-para">
@@ -255,7 +261,7 @@
                         <a class="basic-btn-link basic-btn-active" href="#">Read more</a>
                     </article>
 
-                    <article class="flex-30">
+                    <article class="flex-30 flex-100 padding-768">
                         <img class="article-image width-full" src="assets/media/news-03.png" alt="news-3">
                         <h4 class="article-heading">Basic unix commands that you should know</h4>
                         <p class="section-para">
@@ -270,11 +276,11 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="container">
-                <div class="footer-up flex">
-                    <div class="footer-logo flex-20">
+                <div class="footer-up flex wrap">
+                    <div class="footer-logo flex-20 flex-100">
                         <img src="assets/media/logo.svg" alt="altcampus-logo">
                     </div>
-                    <nav class="quick-links-nav flex-46">
+                    <nav class="quick-links-nav flex-46 flex-100">
                         <h5 class="footer-heading">Quick Links</h5>
                         <ul class="flex justify-between">
                             <li>
@@ -292,9 +298,9 @@
                         </ul>
                     </nav>
 
-                    <nav class="follow-us flex-20">
+                    <nav class="follow-us flex-20 flex-100">
                         <h5 class="footer-heading">Follow Us</h5>
-                        <ul class="flex justify-start">
+                        <ul class="flex justify-start icon-center">
                             <a href="#"><i class="fab fa-facebook-square"></i></a>
                             <a href="#"><i class="fab fa-twitter-square"></i></a>
                         </ul>
