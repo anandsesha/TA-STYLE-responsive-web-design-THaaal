@@ -166,6 +166,10 @@ html {
     text-align: center;
 }
 
+.bars,#toggle{
+    z-index: -1;
+}
+
 /* Buttons */
 
 .btn-primary{
@@ -400,9 +404,120 @@ html {
     margin-right: 2rem;
 }
 .footer-down {
-    background-color: var(--primary);
+    background-color: #122669;
     padding: 2rem 0;
     color: #8d92a8;
     font-size: 1.6rem;
     margin-top: 2rem;
+}
+
+/* Mobile View below 768 px */
+
+@media all and (max-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+    .html{
+        font-size: 10px;
+    }
+    .wrap{
+        flex-wrap: wrap;
+    }
+    .column{
+        flex-direction: column;
+    }
+    .flex-100{
+        flex: 0 1 100%;
+    }
+    .padding-768{
+        padding-top: 3.4rem;
+    }
+    /* Header */
+    .nav-links{
+        display: none;
+    }
+    #toggle:checked ~ .nav-links{
+        display: inline-block;
+    }
+    #toggle{
+        display: none;
+    }
+    .nav-links{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(73, 99, 107,0.9);
+        padding-top: 8rem;
+    }
+    .nav-links li a{
+        margin: 8rem 0;
+        padding-right: 0;
+    }
+    .nav-links li{
+        margin: 2rem 0;
+    }
+    .nav-links .btn-primary{
+        margin-top: 1rem;
+    }
+    .bars{
+        position: relative;
+        z-index: 99;
+    }
+    .bars i{
+        color: var(--white);
+    }
+    /* Hero section */
+    .hero-section{
+        height: 100%;
+    }
+    .hero-heading{
+        padding-right: 0;
+    }
+    .hero-description,.hero-image{
+        text-align: center;
+    }
+    /* Schedule section */
+    .schedule-card{
+        flex-direction: column;
+        text-align: center;
+    }
+    .active-color{
+        background-color: var(--lavender);
+        border-radius: 8px;
+        border: 1px solid var(--secondary);
+    }
+    .other-color{
+        background-color: rgba(255, 182, 193,0.2);
+        border-radius: 8px;
+        border: 1px solid var(--secondary);
+    }
+    .circle,.schedule-card img{
+        margin: 2rem 0;
+    }
+    .schedule-img img{
+        border-radius: 0;
+    }
+    /* Jist section */
+    .jist-card{
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+    /* Latest News Section */
+    .latest-news-section .section-para{
+        margin-bottom: 1rem;
+    }
+    /* Footer */
+    .footer-logo,.footer-heading{
+        text-align: center;
+    }
+    .footer-logo,.quick-links-nav{
+        padding-bottom: 3rem;
+    }    
+    .icon-center{
+        justify-content: center;
+    }
 }
