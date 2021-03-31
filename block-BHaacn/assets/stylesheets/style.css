@@ -413,6 +413,7 @@ html {
 
 /* Mobile View below 768 px */
 
+
 @media all and (max-width: 768px){
     .container{
         max-width: 720px;
@@ -452,6 +453,7 @@ html {
         height: 100%;
         background-color: rgba(73, 99, 107,0.9);
         padding-top: 8rem;
+        z-index: 9;
     }
     .nav-links li a{
         margin: 8rem 0;
@@ -499,7 +501,9 @@ html {
         margin: 2rem 0;
     }
     .schedule-img img{
-        border-radius: 0;
+        border-radius: 8px;
+        max-width: 600px;
+        object-fit: cover;
     }
     /* Jist section */
     .jist-card{
@@ -510,6 +514,10 @@ html {
     .latest-news-section .section-para{
         margin-bottom: 1rem;
     }
+    .article-image img{
+        max-width: 280px;
+        object-fit: cover;
+    }
     /* Footer */
     .footer-logo,.footer-heading{
         text-align: center;
@@ -519,5 +527,21 @@ html {
     }    
     .icon-center{
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .container{
+        max-width: 1140px;
+    }
+}
+@media screen and (max-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media screen and (max-width: 576px){
+    .container{
+        max-width: 540px;
     }
 }
